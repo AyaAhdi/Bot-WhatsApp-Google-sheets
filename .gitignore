@@ -1,0 +1,55 @@
+# Repository Privé - Configuration sécurisée
+# credentials.json est inclus (repository privé)
+
+# Données temporaires et session
+auth_info_baileys/
+feedbacks.json
+messages-responsable.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# QR Codes générés (optionnel - gardez seulement le principal)
+qr-generator/output/*.png
+!qr-generator/output/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

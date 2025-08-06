@@ -1,17 +1,17 @@
-# 🤖 Bot WhatsApp École IGA
+# Bot WhatsApp École IGA
 
-## 📋 Description du Projet
+## Description du Projet
 
 Ce projet est une **solution complète de bot WhatsApp** développée pour l'École IGA. Il permet de collecter automatiquement les informations des étudiants via WhatsApp et de les enregistrer dans Google Sheets. Le système inclut également un générateur de QR Code pour faciliter l'accès au bot.
 
-### 🎯 Objectifs du Projet
+### Objectifs du Projet
 - Automatiser la collecte d'informations d'inscription des étudiants
 - Intégrer WhatsApp comme interface utilisateur principale
 - Stocker les données dans Google Sheets en temps réel
 - Fournir une interface simple et intuitive en français
 - Permettre la génération de QR Codes pour un accès rapide
 
-## 🔧 Technologies Utilisées
+## Technologies Utilisées
 
 - **Node.js** - Runtime JavaScript
 - **@whiskeysockets/baileys** - Librairie WhatsApp Web API
@@ -19,7 +19,7 @@ Ce projet est une **solution complète de bot WhatsApp** développée pour l'Éc
 - **QRCode** - Génération de codes QR
 - **Pino** - Système de logging
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 Bot/
@@ -43,7 +43,7 @@ Bot/
         └── 🖼️ qr-principal.png    # QR Code principal
 ```
 
-## 🚀 Installation et Configuration
+## Installation et Configuration
 
 ### Étape 1: Prérequis
 Assurez-vous d'avoir installé :
@@ -88,7 +88,7 @@ npm install
 node index.js
 ```
 
-## 🖥️ Utilisation du Système
+## Utilisation du Système
 
 ### Fonctionnalités du Bot
 - Menu principal interactif
@@ -119,7 +119,7 @@ node simple-qr.js
 - ⚠️ `auth_info_baileys/` (session WhatsApp temporaire)
 - ⚠️ `messages-responsable.json` (données utilisateurs)
 
-## 🚨 Dépannage
+## Dépannage
 
 ### Problèmes Courants
 
@@ -134,7 +134,7 @@ node index.js
 - Confirmer que le service account a accès au sheet
 - Vérifier l'ID du spreadsheet dans `config.json`
 
-## 📞 Support et Contribution
+## Support et Contribution
 
 Pour toute question sur ce projet :
 1. Consulter cette documentation
@@ -143,7 +143,7 @@ Pour toute question sur ce projet :
 
 ---
 
-**Auteur** : École IGA  
+**Auteur** : AHDI Aya  
 **Version** : 1.0.0  
 **Licence** : MIT  
 **Dernière mise à jour** : Août 2025

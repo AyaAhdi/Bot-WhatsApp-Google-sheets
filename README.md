@@ -3,9 +3,39 @@
 [![Node.js](https://img.shields.io/badge/Node.js-16+-6DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Baileys-25D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white)](https://github.com/WhiskeySockets/Baileys)
 [![Google Sheets API](https://img.shields.io/badge/Google%20Sheets-API-34A853.svg?style=for-the-badge&logo=google-sheets&logoColor=white)](https://developers.google.com/sheets/api)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 Bienvenue sur la documentation officielle du **Bot WhatsApp École IGA**, une solution complète d'automatisation développée pour collecter de manière fluide les informations des étudiants via WhatsApp et les synchroniser en temps réel dans Google Sheets. Le projet intègre également un générateur automatique de QR Codes pour faciliter l'accès à la conversation.
+
+---
+
+## 🎯 Objectifs du Projet
+
+- **Automatiser la collecte** d'informations d'inscription des étudiants.
+- **Intégrer WhatsApp** comme interface utilisateur principale.
+- **Stocker les données** dans Google Sheets en temps réel.
+- **Fournir une interface** simple et intuitive en français.
+- **Permettre la génération** de QR Codes pour un accès rapide.
+
+---
+
+## 🛠️ Technologies Utilisées
+
+- **Node.js** — Runtime JavaScript côté serveur.
+- **@whiskeysockets/baileys** — Librairie WhatsApp Web API pour la gestion des sessions et messages.
+- **Google Sheets API** — API cloud pour la persistance et le stockage des données.
+- **QRCode** — Module de génération dynamique de codes QR d'accès.
+- **Pino** — Système de logging haute performance pour le suivi des événements.
+
+---
+
+## 🌟 Fonctionnalités Principales
+
+- **Processus d'Inscription Interactif** : Menu étape par étape pour guider l'étudiant avec validation automatique des données saisies.
+- **Stockage Google Sheets en Temps Réel** : Synchronisation directe des informations collectées dans une feuille de calcul sécurisée.
+- **Générateur de QR Codes Intégré** : Création automatique de visuels QR Code pour un accès rapide au bot.
+- **Commandes Utiles** :
+  - `*` : Retour rapide au menu principal.
+  - `0` : Quitter la conversation à tout moment.
 
 ---
 

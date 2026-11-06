@@ -1,152 +1,106 @@
-# Bot WhatsApp École IGA
+# 🤖 Bot WhatsApp École IGA : Automatisation & Inscription des Étudiants
 
-## Description du Projet
+[![Node.js](https://img.shields.io/badge/Node.js-16+-6DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Baileys-25D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white)](https://github.com/WhiskeySockets/Baileys)
+[![Google Sheets API](https://img.shields.io/badge/Google%20Sheets-API-34A853.svg?style=for-the-badge&logo=google-sheets&logoColor=white)](https://developers.google.com/sheets/api)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Ce projet est une **solution complète de bot WhatsApp** développée pour l'École IGA. Il permet de collecter automatiquement les informations des étudiants via WhatsApp et de les enregistrer dans Google Sheets. Le système inclut également un générateur de QR Code pour faciliter l'accès au bot.
+Bienvenue sur la documentation officielle du **Bot WhatsApp École IGA**, une solution complète d'automatisation développée pour collecter de manière fluide les informations des étudiants via WhatsApp et les synchroniser en temps réel dans Google Sheets. Le projet intègre également un générateur automatique de QR Codes pour faciliter l'accès à la conversation.
 
-### Objectifs du Projet
-- Automatiser la collecte d'informations d'inscription des étudiants
-- Intégrer WhatsApp comme interface utilisateur principale
-- Stocker les données dans Google Sheets en temps réel
-- Fournir une interface simple et intuitive en français
-- Permettre la génération de QR Codes pour un accès rapide
+---
 
-## Technologies Utilisées
+## 🛠️ Installation & Démarrage Rapide
 
-- **Node.js** - Runtime JavaScript
-- **@whiskeysockets/baileys** - Librairie WhatsApp Web API
-- **Google Sheets API** - Pour le stockage des données
-- **QRCode** - Génération de codes QR
-- **Pino** - Système de logging
-
-## Structure du Projet
-
-```
-Bot/
-├── 📄 index.js                    # Fichier principal du bot WhatsApp
-├── 📄 package.json                # Configuration des dépendances Node.js
-├── 📄 config.json                 # Configuration Google Sheets et bot
-├── 📄 credentials.json            # Clés d'API Google (repository privé)
-├── 📄 credentials.example.json    # Exemple de structure credentials
-├── 📄 disabled_users.json         # Liste des utilisateurs désactivés
-├── 📄 messages-responsable.json   # Messages stockés pour le responsable
-├── 📄 README.md                   # Documentation principale
-├── 📄 QUICK-START.md              # Guide de démarrage rapide
-├── 📄 SUPPORT.md                  # Guide de support complet
-├── 📄 GITHUB-SETUP.md             # Guide de publication GitHub
-├── 📄 .gitignore                  # Protection des fichiers sensibles
-├── 📁 auth_info_baileys/          # Données d'authentification WhatsApp
-└── 📁 qr-generator/               # Module de génération de QR Codes
-    ├── 📄 simple-qr.js            # Script générateur
-    ├── 📄 README.md               # Documentation du générateur
-    └── 📁 output/                 # QR Codes générés
-        └── 🖼️ qr-principal.png    # QR Code principal
-```
-
-## Installation et Configuration
-
-### Étape 1: Prérequis
-Assurez-vous d'avoir installé :
-- **Node.js** (version 16 ou supérieure)
-- **npm** (inclus avec Node.js)
+### 1. Prérequis
+Assurez-vous d'avoir installé **Node.js** (v16 ou supérieure) et **npm** :
 
 ```powershell
-# Vérifier l'installation
 node --version
 npm --version
 ```
 
-### Étape 2: Installation des Dépendances
+### 2. Installation des Dépendances
+Dans le répertoire racine du projet :
 
 ```powershell
-# Dans le répertoire du projet
 npm install
 ```
 
-### Étape 3: Configuration Google Sheets
+### 3. Configuration Google Cloud & Sheets API
+1. Rendez-vous sur la [Google Cloud Console](https://console.cloud.google.com/).
+2. Créez un projet nommé `"IGA-WhatsApp-Bot"` et activez l'**API Google Sheets**.
+3. Dans **APIs & Services > Credentials**, créez un **Compte de Service (Service Account)** et téléchargez la clé au format JSON.
+4. Renommez le fichier téléchargé en `credentials.json` à la racine.
+5. Partagez votre Google Sheet avec l'adresse e-mail du Compte de Service et collez l'ID de la feuille dans `config.json`.
 
-#### 3.1 Créer un Projet Google Cloud
-1. Aller sur [Google Cloud Console](https://console.cloud.google.com/)
-2. Créer un nouveau projet nommé "IGA-WhatsApp-Bot"
-3. Activer l'API Google Sheets
-
-#### 3.2 Créer un Compte de Service
-1. Dans "APIs & Services" > "Credentials"
-2. Cliquer sur "Create Credentials" > "Service Account"
-3. Télécharger le fichier JSON des clés
-4. Renommer le fichier en `credentials.json`
-
-#### 3.3 Configurer Google Sheets
-1. Créer un nouveau Google Sheets
-2. Partager avec l'email du service account
-3. Copier l'ID du spreadsheet et l'ajouter dans `config.json`
-
-### Étape 4: Démarrage du Bot
+### 4. Lancement du Bot
 
 ```powershell
-# Démarrer le bot
 node index.js
 ```
 
-## Utilisation du Système
+---
 
-### Fonctionnalités du Bot
-- Menu principal interactif
-- Processus d'inscription étape par étape
-- Validation automatique des données
-- Sauvegarde dans Google Sheets
-- Générateur de QR Codes
+## 📲 Générateur de QR Codes
 
-### Commandes Spéciales
-- `*` : Retour au menu principal
-- `0` : Quitter la conversation
-
-## 🛠️ Générateur de QR Codes
+Pour générer un nouveau QR Code d'accès rapide au bot :
 
 ```powershell
-# Aller dans le dossier qr-generator
 cd qr-generator
-
-# Générer un QR Code
 node simple-qr.js
 ```
 
-## 🔒 Sécurité et Bonnes Pratiques
+*Le visuel généré sera enregistré dans `qr-generator/output/qr-principal.png`.*
 
-### Fichiers Sensibles
-⚠️ **Repository Privé** - Configuration sécurisée :
-- ✅ `credentials.json` (inclus - repository privé)
-- ⚠️ `auth_info_baileys/` (session WhatsApp temporaire)
-- ⚠️ `messages-responsable.json` (données utilisateurs)
+---
 
-## Dépannage
+## 📁 Structure du Projet
 
-### Problèmes Courants
+```text
+Bot/
+├── auth_info_baileys/             # Données de session temporaires WhatsApp
+├── qr-generator/                  # Module autonome de génération de QR Code
+│   ├── output/
+│   │   └── qr-principal.png       # QR Code principal généré
+│   ├── README.md                  # Documentation du générateur QR
+│   └── simple-qr.js               # Script de génération QR
+├── .gitignore                     # Protection des fichiers sensibles et jetons
+├── config.json                    # Configuration du bot & ID Google Sheets
+├── credentials.example.json       # Structure d'exemple pour les identifiants
+├── credentials.json               # Clés privées Google API (compte de service)
+├── disabled_users.json            # Liste des utilisateurs désactivés
+├── index.js                       # Point d'entrée principal de l'application
+├── messages-responsable.json      # Messages stockés pour la gestion administrative
+├── package.json                   # Gestionnaire des dépendances Node.js
+├── GITHUB-SETUP.md                # Guide de publication GitHub
+├── QUICK-START.md                 # Guide de prise en main rapide
+├── README.md                      # Présentation principale du projet
+└── SUPPORT.md                     # Documentation de support et dépannage
+```
 
-#### QR Code ne s'affiche pas
+---
+
+## 🔒 Sécurité & Dépannage
+
+### Gestion des Fichiers Sensibles
+- ⚠️ **Attention** : N'envoyez jamais vos fichiers `credentials.json`, `auth_info_baileys/` et `messages-responsable.json` sur un dépôt public.
+- Assurez-vous qu'ils soient correctement listés dans votre fichier `.gitignore`.
+
+### Réinitialisation de la Session WhatsApp
+Si le QR Code de connexion ne s'affiche pas dans le terminal :
+
 ```powershell
 Remove-Item -Recurse -Force auth_info_baileys
 node index.js
 ```
 
-#### Erreur Google Sheets
-- Vérifier que l'API est activée
-- Confirmer que le service account a accès au sheet
-- Vérifier l'ID du spreadsheet dans `config.json`
-
-## Support et Contribution
-
-Pour toute question sur ce projet :
-1. Consulter cette documentation
-2. Voir `SUPPORT.md` pour aide détaillée
-3. Voir `QUICK-START.md` pour guide rapide
-
 ---
 
-**Auteur** : AHDI Aya  
-**Version** : 1.0.0  
-**Licence** : MIT  
-**Dernière mise à jour** : Août 2025
+## 👩‍💻 Auteur & Version
+
+- **Auteur** : **AHDI Aya**
+- **Établissement** : École IGA (Institut Supérieur du Génie Appliqué)
+- **Version** : 1.0.0 (Août 2025)
 
 ---
 

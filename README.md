@@ -123,15 +123,4 @@ Si le QR Code de connexion ne s'affiche pas dans le terminal :
 Remove-Item -Recurse -Force auth_info_baileys
 node index.js
 ```
-
----
-
-## 👩‍💻 Auteur & Version
-
-- **Auteur** : **AHDI Aya**
-- **Établissement** : École IGA (Institut Supérieur du Génie Appliqué)
-- **Version** : 1.0.0 (Août 2025)
-
----
-
 *Ce bot a été développé spécifiquement pour l'École IGA dans le but d'automatiser et simplifier le processus d'inscription des étudiants via WhatsApp.*
